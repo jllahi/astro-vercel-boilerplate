@@ -5,12 +5,12 @@ import Card from '../components/Card.astro';
 const ip = Astro.request.headers.get('x-real-ip')
 const city = decodeURIComponent(Astro.request.headers.get('x-vercel-ip-city'))
 
-export const prerender = true;
+// export const prerender = true;
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Welcome to Astro">
 	<main>
-		<h1>Hello from the <span class="text-gradient">Edge</span></h1>
+		<h1>Astro in the <span class="text-gradient">Edge</span></h1>
 		<div class="banner instructions">
 			<p>Your city<br /><strong>{city}</strong></p>
 			<p>Your IP address<br /><strong>{ip}</strong></p>
