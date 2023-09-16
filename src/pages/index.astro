@@ -77,6 +77,20 @@ const city = decodeURIComponent(Astro.request.headers.get('x-vercel-ip-city'))
 		}
 	}
 
+	.banner {
+		background-image: var(--night-sky-gradient);
+		padding: 0.5rem 1.5rem;
+		border-radius: 0.4rem;
+		color: var(--color-bg);
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+	}
+
+	.banner strong {
+		font-size: 1.75em;
+	}
+
 	.instructions {
 		line-height: 1.6;
 		margin: 1rem 0;
