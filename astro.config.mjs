@@ -2,6 +2,8 @@ import { defineConfig } from 'astro/config'
 import vercel from '@astrojs/vercel/serverless'
 
 export default defineConfig({
+	site: 'https://astro-vercel-boilerplate.vercel.app',
+	trailingSlash: 'always',
 	output: 'server',
 	adapter: vercel({
 		devImageService: 'squoosh',
