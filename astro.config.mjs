@@ -4,8 +4,9 @@ import vercel from '@astrojs/vercel/serverless'
 export default defineConfig({
 	site: 'https://astro-vercel-boilerplate.vercel.app',
 	trailingSlash: 'always',
-	output: 'server',
+	output: 'hybrid',
 	adapter: vercel({
+		// edgeMiddleware: true,
 		devImageService: 'squoosh',
 		imageService: true,
 		imagesConfig: {
@@ -21,6 +22,14 @@ export default defineConfig({
 		},
 		webAnalytics: {
 			enabled: true,
+		},
+		isr: {
+			// almacena todas las páginas en la primera solicitud y las guarda por 1 día
+			// expiration: 60 * 60 * 24,
+			// Un string aleatoria secreta que creas.
+			// bypassToken: '005556d774a8',
+			// Rutas que siempre se servirán frescas.
+			// exclude: ['/api/invalidate'],
 		},
 	}),
 })

@@ -1,7 +1,8 @@
 ---
 export const prerender = false
-import Layout from '../layouts/Layout.astro'
-import Card from '../components/Card.astro'
+
+import Layout from '@/layouts/Layout.astro'
+import Card from '@/components/Card.astro'
 
 const ip = Astro.request.headers.get('x-real-ip')
 const city = decodeURIComponent(Astro.request.headers.get('x-vercel-ip-city')!)
