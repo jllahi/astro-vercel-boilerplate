@@ -3,8 +3,8 @@ import vercel from '@astrojs/vercel/serverless'
 
 export default defineConfig({
 	site: 'https://astro-vercel-boilerplate.vercel.app',
-	trailingSlash: 'always',
-	output: 'hybrid',
+	trailingSlash: 'never',
+	output: 'server',
 	adapter: vercel({
 		// edgeMiddleware: true,
 		devImageService: 'squoosh',
