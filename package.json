@@ -17,7 +17,7 @@
 		"@vercel/speed-insights": "^1.0.10",
 		"astro": "^4.5.16",
 		"typescript": "^5.4.4",
-		"web-vitals": "^3.5.2"
+		"web-vitals": "^4.0.0"
 	},
 	"devDependencies": {
 		"react": "^18.2.0"
