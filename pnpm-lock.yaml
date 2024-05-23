@@ -13,7 +13,7 @@ dependencies:
     version: 7.5.2(astro@4.5.17)(react@18.2.0)
   '@vercel/analytics':
     specifier: ^1.2.2
-    version: 1.2.2(react@18.2.0)
+    version: 1.3.0(react@18.2.0)
   '@vercel/speed-insights':
     specifier: ^1.0.10
     version: 1.0.10(react@18.2.0)
@@ -152,7 +152,7 @@ packages:
       astro: ^4.2.0
     dependencies:
       '@astrojs/internal-helpers': 0.4.0
-      '@vercel/analytics': 1.2.2(react@18.2.0)
+      '@vercel/analytics': 1.3.0(react@18.2.0)
       '@vercel/edge': 1.1.1
       '@vercel/nft': 0.26.4
       astro: 4.5.17(typescript@5.4.4)
@@ -1099,8 +1099,8 @@ packages:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
     dev: false
 
-  /@vercel/analytics@1.2.2(react@18.2.0):
-    resolution: {integrity: sha512-X0rctVWkQV1e5Y300ehVNqpOfSOufo7ieA5PIdna8yX/U7Vjz0GFsGf4qvAhxV02uQ2CVt7GYcrFfddXXK2Y4A==}
+  /@vercel/analytics@1.3.0(react@18.2.0):
+    resolution: {integrity: sha512-iAeQhNwL2kGUVbx6Z43uT+PG19Bn7IUOGWB9Z4jmWAyL/Jn6v+KHmZj0fSFCcxN1YXU9xkjKpuD/6YlJmzN06A==}
     peerDependencies:
       next: '>= 13'
       react: ^18 || ^19
@@ -1462,13 +1462,13 @@ packages:
     dev: false
     optional: true
 
-  /bare-fs@2.2.3:
-    resolution: {integrity: sha512-amG72llr9pstfXOBOHve1WjiuKKAMnebcmMbPWDZ7BCevAoJLpugjuAPRsDINEyjT0a6tbaVx3DctkXIRbLuJw==}
+  /bare-fs@2.3.0:
+    resolution: {integrity: sha512-TNFqa1B4N99pds2a5NYHR15o0ZpdNKbAeKTE/+G6ED/UeOavv8RY3dr/Fu99HW3zU3pXpo2kDNO8Sjsm2esfOw==}
     requiresBuild: true
     dependencies:
       bare-events: 2.2.2
-      bare-path: 2.1.1
-      streamx: 2.16.1
+      bare-path: 2.1.3
+      bare-stream: 1.0.0
     dev: false
     optional: true
 
@@ -1478,11 +1478,19 @@ packages:
     dev: false
     optional: true
 
-  /bare-path@2.1.1:
-    resolution: {integrity: sha512-OHM+iwRDRMDBsSW7kl3dO62JyHdBKO3B25FB9vNQBPcGHMo4+eA8Yj41Lfbk3pS/seDY+siNge0LdRTulAau/A==}
+  /bare-path@2.1.3:
+    resolution: {integrity: sha512-lh/eITfU8hrj9Ru5quUp0Io1kJWIk1bTjzo7JH1P5dWmQ2EL4hFUlfI8FonAhSlgIfhn63p84CDY/x+PisgcXA==}
     requiresBuild: true
     dependencies:
       bare-os: 2.2.1
+    dev: false
+    optional: true
+
+  /bare-stream@1.0.0:
+    resolution: {integrity: sha512-KhNUoDL40iP4gFaLSsoGE479t0jHijfYdIcxRn/XtezA2BaUD0NRf/JGRpsMq6dMNM+SrCrB0YSSo/5wBY4rOQ==}
+    requiresBuild: true
+    dependencies:
+      streamx: 2.16.1
     dev: false
     optional: true
 
@@ -3875,8 +3883,8 @@ packages:
       pump: 3.0.0
       tar-stream: 3.1.7
     optionalDependencies:
-      bare-fs: 2.2.3
-      bare-path: 2.1.1
+      bare-fs: 2.3.0
+      bare-path: 2.1.3
     dev: false
     optional: true
 
