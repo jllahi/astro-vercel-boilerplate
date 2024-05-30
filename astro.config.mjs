@@ -1,4 +1,3 @@
-import { SITE } from '@/data/config'
 import vercel from '@astrojs/vercel/serverless'
 import metaTags from 'astro-meta-tags'
 import { defineConfig } from 'astro/config'
@@ -6,7 +5,7 @@ import { defineConfig } from 'astro/config'
 
 // https://astro.build/config
 export default defineConfig({
-  site: SITE.url,
+  site: 'https://astro-vercel-boilerplate.vercel.app',
   trailingSlash: 'never',
   output: 'server',
   adapter: vercel({
