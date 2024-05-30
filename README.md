@@ -1,11 +1,14 @@
 # Astro on Vercel
 
+![Preview](https://astro-vercel-boilerplate.vercel.app/preview.png)
+
 This directory is a brief example of an [Astro](https://astro.build/) site that can be deployed to Vercel with zero configuration. This demo showcases:
 
 - `/` - A static page (pre-rendered)
 - `/ssr` - A page that uses server-side rendering (through Vercel Edge Functions)
 - `/ssr-with-swr-caching` - Similar to the previous page, but also caches the response on the Vercel Edge Network using `cache-control` headers
 - `/edge.json` - An Astro API Endpoint that returns JSON data using Vercel Edge Functions
+- `/image` - Astro Asset using Vercel Image Optimization
 
 Learn more about [Astro on Vercel](https://vercel.com/docs/frameworks/astro).
 
