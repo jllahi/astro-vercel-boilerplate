@@ -1,0 +1,27 @@
+---
+export const prerender = false
+
+import Layout from '@/layouts/Layout.astro'
+
+const data = Astro.locals
+---
+
+<Layout
+  seo={{
+    title: 'Middleware',
+    description:
+      'Allows you to intercept requests and responses and inject behaviors dynamically every time a page or endpoint is about to be rendered.',
+  }}
+>
+  <main>
+    <hgroup>
+      <h1>Middleware</h1>
+      <h2>
+        Allows you to intercept requests and responses and inject behaviors dynamically every time a
+        page or endpoint is about to be rendered.
+      </h2>
+    </hgroup>
+    <h3>{data.title}</h3>
+    <p>This {data.property} is from middleware.</p>
+  </main>
+</Layout>
