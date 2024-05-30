@@ -1,14 +1,15 @@
 ---
 export const prerender = false
 
-import Layout from '@/layouts/Layout.astro'
 import Card from '@/components/Card.astro'
+import Layout from '@/layouts/Layout.astro'
 
 const ip = Astro.request.headers.get('x-real-ip')
 const city = decodeURIComponent(Astro.request.headers.get('x-vercel-ip-city')!)
 ---
 
-<Layout seo={{ title: 'Welcome', description: 'How to use Vercel with Astro' }}>
+<!-- <Layout seo={{ title: 'Welcome', description: 'How to use Vercel with Astro' }}> -->
+<Layout>
   <main>
     <h1>Astro in <span class="text-gradient">Vercel</span></h1>
     <div class="banner">
@@ -16,22 +17,23 @@ const city = decodeURIComponent(Astro.request.headers.get('x-vercel-ip-city')!)
       <p>Your IP address<br /><strong>{ip}</strong></p>
     </div>
     <section class="grid">
-      <Card href="/ssr" header="/ssr">
+      <Card header="/ssr" href="/ssr">
         A page that uses server-side rendering (through Vercel Edge Functions)
       </Card>
-      <Card href="/ssr-with-swr-caching" header="/ssr-with-swr-caching">
+      <Card header="/ssr-with-swr-caching" href="/ssr-with-swr-caching">
         Similar to the previous page, but also caches the response on the Vercel Edge Network using
         cache-control headers
       </Card>
     </section>
     <section class="grid">
-      <Card href="/edge.json" header="/edge.json"
+      <Card header="/edge.json" href="/edge.json" target="_blank"
         >An Astro API Endpoint that returns JSON data using Vercel Edge Functions</Card
       >
-      <Card href="/image" header="/image">Astro Asset using Vercel Image Optimization</Card>
+      <Card header="/image" href="/image">Astro Asset using Vercel Image Optimization</Card>
     </section>
   </main>
 </Layout>
+
 <style>
   h1 {
     display: none;

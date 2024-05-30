@@ -1,31 +1,27 @@
 ---
 interface Props {
   header?: string
-  // body: string;
   footer?: string
   href?: string
+  target?: '_self' | '_blank'
 }
 
-const { header, footer, href } = Astro.props
-
-// <li class="link-card">
-// 	<a href={href}>
-// 		<h2>
-// 			{title}
-// 			<span>&rarr;</span>
-// 		</h2>
-// 		<p>
-// 			{body}
-// 		</p>
-// 	</a>
-// </li>
+const { header, footer, href, target } = Astro.props
 ---
 
 <article>
   {
     header && (
       <header class="text-xl font-black">
-        <h3>{href ? <a href={href}>{header}</a> : { header }}</h3>
+        <h3>
+          {target == '_blank' ? (
+            <a href={href} target="_blank">
+              {header}
+            </a>
+          ) : (
+            <a href={href}>{header}</a>
+          )}
+        </h3>
       </header>
     )
   }

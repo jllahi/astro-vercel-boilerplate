@@ -1,5 +1,5 @@
 export const SITE = {
-  title: 'AstroPico',
-  description: 'Minimal CSS Framework for Semantic HTML',
-  image: '/open-graph.png',
+  title: 'Astro on Vercel',
+  description: "Learn how to use Vercel's features with Astro",
+  image: '/open-graph.jpg',
 }

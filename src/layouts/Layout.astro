@@ -2,7 +2,7 @@
 import SpeedInsights from '@vercel/speed-insights/astro'
 // import '@fontsource/geist-sans';
 import '@fontsource-variable/inter'
-import '@picocss/pico/css/pico.min.css'
+import '@picocss/pico/css/pico.orange.min.css'
 import '@/assets/styles/globals.css'
 import Header from '@/components/Header.astro'
 import Footer from '@/components/Footer.astro'
@@ -12,7 +12,6 @@ import { SITE } from '@/data/config'
 
 interface Props {
   seo?: SEOProps
-  // title: string
 }
 
 const { seo } = Astro.props
@@ -28,7 +27,6 @@ const { seo } = Astro.props
     <link href="/pico-mark-light.svg" rel="icon" media="(prefers-color-scheme: light)" />
     <link href="/pico-mark-dark.svg" rel="icon" media="(prefers-color-scheme: dark)" />
     <meta name="generator" content={Astro.generator} />
-    <!-- <title>{title}</title> -->
     <SEO
       titleTemplate=`%s | ${SITE.title}`
       titleDefault={SITE.title}
