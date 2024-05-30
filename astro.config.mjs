@@ -17,7 +17,7 @@ export default defineConfig({
       domains: [],
       remotePatterns: [
         {
-          // protocol: 'https',
+          protocol: 'https',
           // hostname: '^via\\.placeholder\\.com$',
           // pathname: '^/1280x640/.*$',
         },
