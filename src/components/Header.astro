@@ -1,0 +1,85 @@
+---
+import { Image } from 'astro:assets'
+import logoPicoDark from '@/assets/images/pico-logo-dark.svg'
+import logoPicoLight from '@/assets/images/pico-logo-light.svg'
+---
+
+<header class="container">
+  <nav>
+    <ul>
+      <li>
+        <a href="/" title="Go home">
+          <h2>Pico</h2>
+          <Image
+            src={logoPicoLight}
+            width={logoPicoLight.width}
+            height={logoPicoLight.height}
+            loading={'eager'}
+            alt="Pico light logo"
+            class="light"
+          />
+          <Image
+            src={logoPicoDark}
+            width={logoPicoDark.width}
+            height={logoPicoDark.height}
+            loading={'eager'}
+            alt="Pico dark logo"
+            class="dark"
+          />
+        </a>
+      </li>
+    </ul>
+    <ul>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact">Contact</a></li>
+      <!-- <li>
+        <details class="dropdown">
+          <summary>Theme</summary>
+          <ul dir="ltr">
+            <li><a href="#" data-theme-switcher="auto">Auto</a></li>
+            <li><a href="#" data-theme-switcher="dark">Dark</a></li>
+            <li><a href="#" data-theme-switcher="light">Light</a></li>
+          </ul>
+        </details>
+      </li> -->
+    </ul>
+  </nav>
+  <hr />
+</header>
+
+<style>
+  h2 {
+    display: none;
+  }
+
+  img {
+    width: 170px;
+  }
+  @media (max-width: 768px) {
+    img {
+      width: 120px;
+    }
+  }
+
+  @media (prefers-color-scheme: light) {
+    img.dark {
+      display: none;
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    img.light {
+      display: none;
+    }
+  }
+</style>
+
+<!-- <script>
+  const nav = document.querySelector('.navbar')
+  const navLinks = nav.querySelectorAll('a')
+  const currentURL = window.location.href
+  navLinks.forEach((link) => {
+    if (link.href === currentURL) {
+      link.classList.add('active')
+    }
+  })
+</script> -->
