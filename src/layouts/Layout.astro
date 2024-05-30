@@ -49,6 +49,7 @@ const { seo } = Astro.props
         card: 'summary_large_image',
         title: seo?.title || SITE.title,
         description: seo?.description || SITE.description,
+        image: SITE.image || '/open-graph.jpg',
       }}
       {...seo}
     />
