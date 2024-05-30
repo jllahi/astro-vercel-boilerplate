@@ -1,7 +1,23 @@
 ---
 export const prerender = false
 
-const time = new Date().toLocaleTimeString();
+import Layout from '@/layouts/Layout.astro'
+
+const time = new Date().toLocaleTimeString()
 ---
 
-<h1>{time}</h1>
+<Layout
+  seo={{
+    title: 'SSR',
+    description: 'A page that uses server-side rendering (through Vercel Edge Functions)',
+  }}
+>
+  <section>
+    <hgroup>
+      <h2>SSR</h2>
+      <p>A page that uses server-side rendering (through Vercel Edge Functions)</p>
+    </hgroup>
+
+    <h1>{time}</h1>
+  </section>
+</Layout>

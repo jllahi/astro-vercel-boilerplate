@@ -1,38 +1,58 @@
 ---
 import { Image } from 'astro:assets'
-import logoPicoDark from '@/assets/images/pico-logo-dark.svg'
-import logoPicoLight from '@/assets/images/pico-logo-light.svg'
+import astroLogoDark from '@/assets/images/astro-logo-dark.svg'
+import astroLogoLight from '@/assets/images/astro-logo-light.svg'
+import vercelLogoDark from '@/assets/images/vercel-logo-dark.svg'
+import vercelLogoLight from '@/assets/images/vercel-logo-light.svg'
 ---
 
 <header class="container">
   <nav>
     <ul>
       <li>
-        <a href="/" title="Go home">
-          <h2>Pico</h2>
+        <a href="/" title="Astro on Vercel">
+          <h2>Astro on Vercel</h2>
           <Image
-            src={logoPicoLight}
-            width={logoPicoLight.width}
-            height={logoPicoLight.height}
+            src={astroLogoLight}
+            width={astroLogoLight.width}
+            height={astroLogoLight.height}
             loading={'eager'}
-            alt="Pico light logo"
+            alt="Astro light logo"
             class="light"
           />
           <Image
-            src={logoPicoDark}
-            width={logoPicoDark.width}
-            height={logoPicoDark.height}
+            src={astroLogoDark}
+            width={astroLogoDark.width}
+            height={astroLogoDark.height}
             loading={'eager'}
-            alt="Pico dark logo"
+            alt="Astro dark logo"
+            class="dark"
+          />
+        </a>
+        <a href="/" title="Astro on Vercel">
+          <Image
+            src={vercelLogoLight}
+            width={vercelLogoLight.width}
+            height={vercelLogoLight.height}
+            loading={'eager'}
+            alt="Vercel light logo"
+            class="light"
+          />
+          <Image
+            src={vercelLogoDark}
+            width={vercelLogoDark.width}
+            height={vercelLogoDark.height}
+            loading={'eager'}
+            alt="Vercel dark logo"
             class="dark"
           />
         </a>
       </li>
     </ul>
-    <ul>
+    <!-- <ul>
       <li><a href="/about">About</a></li>
       <li><a href="/contact">Contact</a></li>
-      <!-- <li>
+      <li>
         <details class="dropdown">
           <summary>Theme</summary>
           <ul dir="ltr">
@@ -41,8 +61,8 @@ import logoPicoLight from '@/assets/images/pico-logo-light.svg'
             <li><a href="#" data-theme-switcher="light">Light</a></li>
           </ul>
         </details>
-      </li> -->
-    </ul>
+      </li>
+    </ul> -->
   </nav>
   <hr />
 </header>
@@ -54,6 +74,8 @@ import logoPicoLight from '@/assets/images/pico-logo-light.svg'
 
   img {
     width: 170px;
+    max-height: 190px;
+    margin: 5px 0;
   }
   @media (max-width: 768px) {
     img {
@@ -62,12 +84,12 @@ import logoPicoLight from '@/assets/images/pico-logo-light.svg'
   }
 
   @media (prefers-color-scheme: light) {
-    img.dark {
+    img.light {
       display: none;
     }
   }
   @media (prefers-color-scheme: dark) {
-    img.light {
+    img.dark {
       display: none;
     }
   }

@@ -5,7 +5,7 @@
 :root {
   --pico-font-family-sans-serif: 'Inter Variable', system-ui, 'Segoe UI', Roboto, Oxygen, Ubuntu,
     Cantarell, Helvetica, Arial, 'Helvetica Neue', sans-serif, var(--pico-font-family-emoji);
-  /* --pico-font-size: 100%; */
+  --pico-font-size: 110%;
   /* --pico-border-radius: 2rem; */
 }
 /* h1 {

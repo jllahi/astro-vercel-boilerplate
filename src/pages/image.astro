@@ -1,6 +1,47 @@
 ---
 import { Image as AstroImage } from 'astro:assets'
-import astroLogo from '@/assets/logo.png'
+import imageDark from '@/assets/images/context-menu-dark.jpg'
+import imageLight from '@/assets/images/context-menu-light.jpg'
+import Layout from '@/layouts/Layout.astro'
 ---
 
-<AstroImage src={astroLogo} alt="Astro Logo" width={50} quality={75} />
+<Layout seo={{ title: 'Image', description: 'Astro Asset using Vercel Image Optimization' }}>
+  <section>
+    <hgroup>
+      <h2>Image Optimization</h2>
+      <p>Astro Asset using Vercel Image Optimization</p>
+    </hgroup>
+    <AstroImage
+      src={imageLight}
+      alt="Light Image"
+      width={imageLight.width}
+      height={imageLight.height}
+      quality={75}
+      class="light"
+    />
+    <AstroImage
+      src={imageDark}
+      alt="Dark Image"
+      width={imageLight.width}
+      height={imageLight.height}
+      quality={75}
+      class="dark"
+    />
+  </section>
+</Layout>
+
+<style>
+  img {
+    /* width: 100%; */
+  }
+  @media (prefers-color-scheme: light) {
+    img.dark {
+      display: none;
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    img.light {
+      display: none;
+    }
+  }
+</style>

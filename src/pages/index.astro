@@ -8,115 +8,67 @@ const ip = Astro.request.headers.get('x-real-ip')
 const city = decodeURIComponent(Astro.request.headers.get('x-vercel-ip-city')!)
 ---
 
-<Layout title="Welcome to Astro">
-	<main>
-		<h1>Astro in <span class="text-gradient">Vercel</span></h1>
-		<div class="banner instructions">
-			<p>Your city<br /><strong>{city}</strong></p>
-			<p>Your IP address<br /><strong>{ip}</strong></p>
-		</div>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="/ssr"
-				title="/ssr"
-				body="A page that uses server-side rendering (through Vercel Edge Functions)"
-			/>
-			<Card
-				href="/ssr-with-swr-caching"
-				title="/ssr-with-swr-caching"
-				body="Similar to the previous page, but also caches the response on the Vercel Edge Network using cache-control headers"
-			/>
-			<Card
-				href="/image"
-				title="/image"
-				body="Astro Asset using Vercel Image Optimization"
-			/>
-			<Card
-				href="/edge.json"
-				title="/edge.json"
-				body="An Astro API Endpoint that returns JSON data using Vercel Edge Functions"
-			/>
-		</ul>
-		<p>
-			Learn more about <a
-				href="https://vercel.com/docs/frameworks/astro"
-				rel="nofollow"
-				target="_blank">Astro on Vercel</a
-			>.
-		</p>
-	</main>
-
-	<style>
-		:root {
-			--astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
-		}
-
-		h1 {
-			margin: 2rem 0;
-		}
-
-		main {
-			margin: auto;
-			padding: 1em;
-			max-width: 60ch;
-		}
-
-		.text-gradient {
-			font-weight: 900;
-			background-image: var(--astro-gradient);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			background-size: 100% 200%;
-			background-position-y: 100%;
-			border-radius: 0.4rem;
-			animation: pulse 4s ease-in-out infinite;
-		}
-
-		@keyframes pulse {
-			0%,
-			100% {
-				background-position-y: 0%;
-			}
-			50% {
-				background-position-y: 80%;
-			}
-		}
-
-		.banner {
-			background-image: var(--night-sky-gradient);
-			padding: 0.5rem 1.5rem;
-			border-radius: 0.4rem;
-			color: var(--color-bg);
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-			gap: 1rem;
-		}
-
-		.banner strong {
-			font-size: 1.75em;
-		}
-
-		.instructions {
-			line-height: 1.6;
-			margin: 1rem 0;
-			background: #4f39fa;
-			padding: 1rem;
-			border-radius: 0.4rem;
-			color: var(--color-bg);
-		}
-
-		.instructions code {
-			font-size: 0.875em;
-			border: 0.1em solid var(--color-border);
-			border-radius: 4px;
-			padding: 0.15em 0.25em;
-		}
-
-		.link-card-grid {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-			gap: 1rem;
-			padding: 0;
-		}
-	</style>
+<Layout seo={{ title: 'Welcome', description: 'How to use Vercel with Astro' }}>
+  <main>
+    <h1>Astro in <span class="text-gradient">Vercel</span></h1>
+    <div class="banner">
+      <p>Your city<br /><strong>{city}</strong></p>
+      <p>Your IP address<br /><strong>{ip}</strong></p>
+    </div>
+    <section class="grid">
+      <Card href="/ssr" header="/ssr">
+        A page that uses server-side rendering (through Vercel Edge Functions)
+      </Card>
+      <Card href="/ssr-with-swr-caching" header="/ssr-with-swr-caching">
+        Similar to the previous page, but also caches the response on the Vercel Edge Network using
+        cache-control headers
+      </Card>
+    </section>
+    <section class="grid">
+      <Card href="/edge.json" header="/edge.json"
+        >An Astro API Endpoint that returns JSON data using Vercel Edge Functions</Card
+      >
+      <Card href="/image" header="/image">Astro Asset using Vercel Image Optimization</Card>
+    </section>
+  </main>
 </Layout>
+<style>
+  h1 {
+    display: none;
+  }
+  .banner {
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18ch, 1fr));
+    gap: 1rem;
+    margin-bottom: 40px;
+    font-size: 120%;
+  }
+  .banner strong {
+    font-size: 1.75em;
+  }
+</style>
+<!-- 
+
+  .banner strong {
+    font-size: 1.75em;
+  }
+
+  .instructions {
+    line-height: 1.6;
+    margin: 1rem 0;
+    background: #4f39fa;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    color: var(--color-bg);
+  }
+
+  .instructions code {
+    font-size: 0.875em;
+    border: 0.1em solid var(--color-border);
+    border-radius: 4px;
+    padding: 0.15em 0.25em;
+  }
+
+</style> -->

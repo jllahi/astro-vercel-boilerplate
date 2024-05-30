@@ -6,9 +6,13 @@
   "scripts": {
     "astro": "astro",
     "build": "astro check && astro build",
+    "check": "astro check",
     "dev": "astro dev",
+    "format": "prettier -c .",
+    "lint": "eslint --fix .",
     "preview": "astro preview",
-    "start": "astro dev"
+    "start": "astro dev",
+    "vercel:dev": "vercel dev"
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",
