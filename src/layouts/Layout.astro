@@ -37,7 +37,18 @@ const { seo } = Astro.props
           title: seo?.title || SITE.title,
           type: 'website', // https://ogp.me/#types
           image: SITE.image || '/open-graph.jpg',
+          url: SITE.url,
         },
+        optional: {
+          description: seo?.description || SITE.description,
+          siteName: SITE.title,
+        },
+      }}
+      twitter={{
+        // creator: '@john',
+        card: 'summary_large_image',
+        title: seo?.title || SITE.title,
+        description: seo?.description || SITE.description,
       }}
       {...seo}
     />
