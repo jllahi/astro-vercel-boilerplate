@@ -12,7 +12,8 @@
     "lint": "eslint --fix .",
     "preview": "astro preview",
     "start": "astro dev",
-    "vercel:dev": "vercel dev"
+    "vercel:dev": "vercel dev",
+    "vercel:link": "vercel link"
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",
