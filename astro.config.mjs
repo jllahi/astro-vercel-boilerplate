@@ -33,7 +33,7 @@ export default defineConfig({
       // Un string aleatoria secreta que creas.
       bypassToken: '115556d774a8115556d774a8115556d774a8s',
       // Rutas que siempre se servirán frescas.
-      exclude: ['/api/revalidate', '/ssr', '/edge.json'],
+      exclude: ['/api/revalidate', '/edge.json'],
     },
   }),
   integrations: [
