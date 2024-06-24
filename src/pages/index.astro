@@ -31,6 +31,12 @@ const city = decodeURIComponent(Astro.request.headers.get('x-vercel-ip-city')!)
       >
       <Card header="/image" href="/image">Astro Asset using Vercel Image Optimization</Card>
     </section>
+    <section class="grid">
+      <Card header="/isr" href="/isr"
+        >Incremental Static Regeneration (ISR) allows you to create or update content on your site
+        without redeploying</Card
+      >
+    </section>
   </main>
 </Layout>
 

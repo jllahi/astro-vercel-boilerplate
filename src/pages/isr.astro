@@ -1,0 +1,76 @@
+---
+export const prerender = false
+
+import Layout from '@/layouts/Layout.astro'
+
+Astro.response.headers.set('Cache-Control', 's-maxage=10, stale-while-revalidate')
+// Astro.response.headers.set('Vercel-CDN-Cache-Control', 'max-age=3600',);
+// Astro.response.headers.set('CDN-Cache-Control', 'max-age=60',);
+
+const time = new Date().toLocaleTimeString()
+---
+
+<Layout
+  seo={{
+    title: 'Incremental Static Regeneration (ISR)',
+    description:
+      'A page that uses Incremental Static Regeneration (ISR) allows you to create or update content on your site without redeploying',
+  }}
+>
+  <section>
+    <hgroup>
+      <h2>Incremental Static Regeneration (ISR)</h2>
+      <p>
+        A page that uses Incremental Static Regeneration (ISR) allows you to create or update
+        content on your site without redeploying
+      </p>
+    </hgroup>
+
+    <h1>{time}</h1>
+
+    <a href="/isr">Refresh</a> &nbsp; <button id="revalidate">Revalidate</button>
+    {
+      //  - <button
+      //   class="revalidate-button btn btn-primary my-2 block border border-gray-600 p-1"
+      //   data-tag="cats">Invalidate tag: cats</button
+      // >
+    }
+  </section>
+</Layout>
+
+<script>
+  function revalidate() {
+    fetch('/api/revalidate', {
+      method: 'POST',
+      // body: JSON.stringify({ tags: [tag] }),
+      // body: JSON.stringify({ tag }),
+      body: JSON.stringify(''),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+    alert(`Revalidated`)
+  }
+
+  // function revalidateTag(tag: string) {
+  //   fetch('/api/revalidate', {
+  //     method: 'POST',
+  //     // body: JSON.stringify({ tags: [tag] }),
+  //     body: JSON.stringify({ tag }),
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //     },
+  //   })
+  //   alert(`Invalidated tag: ${tag}`)
+  // }
+
+  const revalidateButton = document.querySelectorAll('button#revalidate')[0]
+  revalidateButton.addEventListener('click', () => {
+    // const tag = (e.target as HTMLButtonElement).getAttribute('data-tag')
+    revalidate()
+  })
+  // revalidateButton.addEventListener('click', (e) => {
+  //   const tag = (e.target as HTMLButtonElement).getAttribute('data-tag')
+  //   revalidate(tag!)
+  // })
+</script>
