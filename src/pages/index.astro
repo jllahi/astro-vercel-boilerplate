@@ -20,22 +20,20 @@ const city = decodeURIComponent(Astro.request.headers.get('x-vercel-ip-city')!)
       <Card header="/ssr" href="/ssr">
         A page that uses server-side rendering (through Vercel Edge Functions)
       </Card>
-      <Card header="/ssr-with-swr-caching" href="/ssr-with-swr-caching">
+      <Card header="/isr" href="/isr"
+        >Incremental Static Regeneration (ISR) allows you to create or update content on your site
+        without redeploying</Card
+      >
+      <!-- <Card header="/ssr-with-swr-caching" href="/ssr-with-swr-caching">
         Similar to the previous page, but also caches the response on the Vercel Edge Network using
         cache-control headers
-      </Card>
+      </Card> -->
     </section>
     <section class="grid">
       <Card header="/edge.json" href="/edge.json" target="_blank"
         >An Astro API Endpoint that returns JSON data using Vercel Edge Functions</Card
       >
       <Card header="/image" href="/image">Astro Asset using Vercel Image Optimization</Card>
-    </section>
-    <section class="grid">
-      <Card header="/isr" href="/isr"
-        >Incremental Static Regeneration (ISR) allows you to create or update content on your site
-        without redeploying</Card
-      >
     </section>
   </main>
 </Layout>
