@@ -3,7 +3,7 @@ export const prerender = false
 
 import Layout from '@/layouts/Layout.astro'
 
-const data = Astro.locals
+// const data = Astro.locals
 ---
 
 <Layout
@@ -21,7 +21,7 @@ const data = Astro.locals
         page or endpoint is about to be rendered.
       </h2>
     </hgroup>
-    <h3>{data.title}</h3>
-    <p>This {data.property} is from middleware.</p>
+    <!-- <h3>{data.title}</h3>
+    <p>This {data.property} is from middleware.</p> -->
   </main>
 </Layout>
