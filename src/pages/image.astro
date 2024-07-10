@@ -1,8 +1,8 @@
 ---
-import { Image as AstroImage } from 'astro:assets'
 import imageDark from '@/assets/images/context-menu-dark.jpg'
 import imageLight from '@/assets/images/context-menu-light.jpg'
 import Layout from '@/layouts/Layout.astro'
+import { Image as AstroImage } from 'astro:assets'
 ---
 
 <Layout seo={{ title: 'Image', description: 'Astro Asset using Vercel Image Optimization' }}>
@@ -13,18 +13,20 @@ import Layout from '@/layouts/Layout.astro'
     </hgroup>
     <AstroImage
       src={imageLight}
-      alt="Light Image"
+      alt="Light Screenshot"
       width={imageLight.width}
       height={imageLight.height}
-      quality={75}
+      format={'webp'}
+      quality={80}
       class="light"
     />
     <AstroImage
       src={imageDark}
-      alt="Dark Image"
+      alt="Dark Screenshot"
       width={imageLight.width}
       height={imageLight.height}
-      quality={75}
+      format={'webp'}
+      quality={80}
       class="dark"
     />
   </section>

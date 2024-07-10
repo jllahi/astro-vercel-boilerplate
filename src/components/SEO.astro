@@ -1,0 +1,37 @@
+---
+import { SITE } from '@/data/config'
+import { SEO as AstroSEO, type Props as SEOProps } from 'astro-seo'
+
+interface Props {
+  seo?: SEOProps
+}
+
+const { seo } = Astro.props
+---
+
+<AstroSEO
+  titleTemplate=`%s | ${SITE.title}`
+  titleDefault={SITE.title}
+  title={seo?.title}
+  description={seo?.description || SITE.description}
+  openGraph={{
+    basic: {
+      title: seo?.title || SITE.title,
+      type: 'website', // https://ogp.me/#types
+      image: SITE.image || '/open-graph.jpg',
+      url: SITE.url,
+    },
+    optional: {
+      description: seo?.description || SITE.description,
+      siteName: SITE.title,
+    },
+  }}
+  twitter={{
+    // creator: '@john',
+    card: 'summary_large_image',
+    title: seo?.title || SITE.title,
+    description: seo?.description || SITE.description,
+    image: SITE.image || '/open-graph.jpg',
+  }}
+  {...seo}
+/>
