@@ -8,7 +8,7 @@ const ip = Astro.request.headers.get('x-real-ip')
 const city = decodeURIComponent(Astro.request.headers.get('x-vercel-ip-city')!)
 ---
 
-<!-- <Layout seo={{ title: 'Welcome', description: 'How to use Vercel with Astro' }}> -->
+{/* <!-- <Layout seo={{ title: 'Welcome', description: 'How to use Vercel with Astro' }}> --> */}
 <Layout>
   <main>
     <h1>Astro in <span class="text-gradient">Vercel</span></h1>
@@ -24,10 +24,10 @@ const city = decodeURIComponent(Astro.request.headers.get('x-vercel-ip-city')!)
         >Incremental Static Regeneration (ISR) allows you to create or update content on your site
         without redeploying</Card
       >
-      <!-- <Card header="/ssr-with-swr-caching" href="/ssr-with-swr-caching">
+      {/* <!-- <Card header="/ssr-with-swr-caching" href="/ssr-with-swr-caching">
         Similar to the previous page, but also caches the response on the Vercel Edge Network using
         cache-control headers
-      </Card> -->
+      </Card> -->  */}
     </section>
     <section class="grid">
       <Card header="/edge.json" href="/edge.json" target="_blank"
@@ -55,7 +55,7 @@ const city = decodeURIComponent(Astro.request.headers.get('x-vercel-ip-city')!)
     font-size: 1.75em;
   }
 </style>
-<!-- 
+{/* <!-- 
 
   .banner strong {
     font-size: 1.75em;
@@ -77,4 +77,4 @@ const city = decodeURIComponent(Astro.request.headers.get('x-vercel-ip-city')!)
     padding: 0.15em 0.25em;
   }
 
-</style> -->
+</style> -->  */}

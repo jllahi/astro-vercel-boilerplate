@@ -6,9 +6,9 @@ import SpeedInsights from '@vercel/speed-insights/astro'
 import { type Props as SEOProps } from 'astro-seo'
 import { ClientRouter } from 'astro:transitions'
 // import '@fontsource/geist-sans';
+import '@/assets/styles/globals.css'
 import '@fontsource-variable/inter'
 import '@picocss/pico/css/pico.orange.min.css'
-import '@/assets/styles/globals.css'
 
 interface Props {
   seo?: SEOProps
@@ -37,9 +37,9 @@ const { seo } = Astro.props
       <slot />
     </main>
     <Footer />
-    <script>
+    {/* <script>
       // import '@/assets/scripts/theme-switcher'
       // import '@/assets/scripts/modal'
-    </script>
+    </script> */}
   </body>
 </html>

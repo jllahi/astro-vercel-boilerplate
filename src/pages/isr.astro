@@ -37,7 +37,7 @@ const time = new Date().toLocaleTimeString()
   </section>
 </Layout>
 
-<script>
+<script is:inline>
   function revalidate() {
     fetch('/api/revalidate', {
       method: 'POST',
