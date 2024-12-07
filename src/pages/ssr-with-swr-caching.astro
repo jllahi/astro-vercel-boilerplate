@@ -1,7 +1,7 @@
 ---
-export const prerender = false
-
 import Layout from '@/layouts/Layout.astro'
+
+export const prerender = false
 
 Astro.response.headers.set('Cache-Control', 's-maxage=10, stale-while-revalidate')
 // Astro.response.headers.set('Vercel-CDN-Cache-Control', 'max-age=3600',);
@@ -15,8 +15,7 @@ const time = new Date().toLocaleTimeString()
     title: 'SSR with SWR caching',
     description:
       'A page that uses server-side rendering (through Vercel Edge Functions), but also caches the response on the Vercel Edge Network using cache-control headers',
-  }}
->
+  }}>
   <section>
     <hgroup>
       <h2>SSR with SWR caching</h2>

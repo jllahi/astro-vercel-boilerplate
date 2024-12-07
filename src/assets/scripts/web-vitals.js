@@ -1,6 +1,6 @@
 import { webVitals } from '../../lib/vitals'
 
-let analyticsId = import.meta.env.PUBLIC_VERCEL_ANALYTICS_ID
+const analyticsId = import.meta.env.PUBLIC_VERCEL_ANALYTICS_ID
 
 if (analyticsId) {
   webVitals({

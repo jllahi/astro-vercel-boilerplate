@@ -1,18 +1,21 @@
 /** @type {import('prettier').Config} */
 
 export default {
-  // module.exports = {
-  // These settings are duplicated in .editorconfig:
-  tailwindAttributes: ['class:list', 'cn'],
-  tailwindFunctions: ['class:list', 'tv', 'cn'],
-  tabWidth: 2, // indent_size = 2
   useTabs: false, // indent_style = space
-  endOfLine: 'lf', // end_of_line = lf
-  semi: false, // default: true
-  singleQuote: true, // default: false
-  printWidth: 100, // default: 80
   trailingComma: 'es5',
+  tailwindFunctions: ['clsx', 'cn', 'tw', 'tv'],
+  tailwindAttributes: ['class:list', 'cn', 'className'],
+  tabWidth: 2, // indent_size = 2
+  singleQuote: true, // default: false
+  semi: false, // default: true
+  quoteProps: 'consistent',
+  printWidth: 100, // default: 80
+  jsxSingleQuote: false,
+  endOfLine: 'lf', // end_of_line = lf
   bracketSpacing: true,
+  bracketSameLine: true,
+  astroAllowShorthand: false,
+  arrowParens: 'always',
   plugins: [
     'prettier-plugin-astro',
     'prettier-plugin-organize-imports',

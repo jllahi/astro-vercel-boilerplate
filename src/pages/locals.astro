@@ -1,9 +1,9 @@
 ---
-export const prerender = false
-
 import Layout from '@/layouts/Layout.astro'
 
 // const data = Astro.locals
+
+export const prerender = false
 ---
 
 <Layout
@@ -11,8 +11,7 @@ import Layout from '@/layouts/Layout.astro'
     title: 'Middleware',
     description:
       'Allows you to intercept requests and responses and inject behaviors dynamically every time a page or endpoint is about to be rendered.',
-  }}
->
+  }}>
   <main>
     <hgroup>
       <h1>Middleware</h1>

@@ -1,4 +1,4 @@
-import vercel from '@astrojs/vercel/serverless'
+import vercel from '@astrojs/vercel'
 import metaTags from 'astro-meta-tags'
 import { defineConfig } from 'astro/config'
 // import tailwind from '@astrojs/tailwind'

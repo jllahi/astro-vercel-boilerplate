@@ -1,7 +1,7 @@
 ---
-export const prerender = false
-
 import Layout from '@/layouts/Layout.astro'
+
+export const prerender = false
 
 // Astro.response.headers.set('Cache-Control', 's-maxage=10, stale-while-revalidate')
 // Astro.response.headers.set('Vercel-CDN-Cache-Control', 'max-age=3600',);
@@ -15,8 +15,7 @@ const time = new Date().toLocaleTimeString()
     title: 'Incremental Static Regeneration (ISR)',
     description:
       'A page that uses Incremental Static Regeneration (ISR) allows you to create or update content on your site without redeploying',
-  }}
->
+  }}>
   <section>
     <hgroup>
       <h2>Incremental Static Regeneration (ISR)</h2>
@@ -49,6 +48,7 @@ const time = new Date().toLocaleTimeString()
         'Content-Type': 'application/json',
       },
     })
+    // eslint-disable-next-line no-alert
     alert(`Revalidated`)
   }
 

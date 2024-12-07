@@ -13,16 +13,19 @@ const scrollbarWidthCssVar = '--pico-scrollbar-width'
 const animationDuration = 400 // ms
 let visibleModal = null
 
-// Toggle modal
-const toggleModal = (event) => {
-  event.preventDefault()
-  const modal = document.getElementById(event.currentTarget.dataset.target)
-  if (!modal) return
-  modal && (modal.open ? closeModal(modal) : openModal(modal))
+// Get scrollbar width
+export const getScrollbarWidth = () => {
+  const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth
+  return scrollbarWidth
+}
+
+// Is scrollbar visible
+export const isScrollbarVisible = () => {
+  return document.body.scrollHeight > screen.height
 }
 
 // Open modal
-const openModal = (modal) => {
+export const openModal = (modal) => {
   const { documentElement: html } = document
   const scrollbarWidth = getScrollbarWidth()
   if (scrollbarWidth) {
@@ -37,7 +40,7 @@ const openModal = (modal) => {
 }
 
 // Close modal
-const closeModal = (modal) => {
+export const closeModal = (modal) => {
   visibleModal = null
   const { documentElement: html } = document
   html.classList.add(closingClass)
@@ -46,6 +49,14 @@ const closeModal = (modal) => {
     html.style.removeProperty(scrollbarWidthCssVar)
     modal.close()
   }, animationDuration)
+}
+
+// Toggle modal
+export const toggleModal = (event) => {
+  event.preventDefault()
+  const modal = document.getElementById(event.currentTarget.dataset.target)
+  if (!modal) return
+  modal && (modal.open ? closeModal(modal) : openModal(modal))
 }
 
 // Close with a click outside
@@ -62,14 +73,3 @@ document.addEventListener('keydown', (event) => {
     closeModal(visibleModal)
   }
 })
-
-// Get scrollbar width
-const getScrollbarWidth = () => {
-  const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth
-  return scrollbarWidth
-}
-
-// Is scrollbar visible
-const isScrollbarVisible = () => {
-  return document.body.scrollHeight > screen.height
-}

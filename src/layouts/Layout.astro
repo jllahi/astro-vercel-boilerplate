@@ -1,14 +1,14 @@
 ---
+import Footer from '@/components/Footer.astro'
+import Header from '@/components/Header.astro'
+import SEO from '@/components/SEO.astro'
 import SpeedInsights from '@vercel/speed-insights/astro'
+import { type Props as SEOProps } from 'astro-seo'
+import { ClientRouter } from 'astro:transitions'
 // import '@fontsource/geist-sans';
 import '@fontsource-variable/inter'
 import '@picocss/pico/css/pico.orange.min.css'
 import '@/assets/styles/globals.css'
-import Header from '@/components/Header.astro'
-import Footer from '@/components/Footer.astro'
-import { ViewTransitions } from 'astro:transitions'
-import { type Props as SEOProps } from 'astro-seo'
-import SEO from '@/components/SEO.astro'
 
 interface Props {
   seo?: SEOProps
@@ -28,7 +28,7 @@ const { seo } = Astro.props
     <link href="/pico-mark-dark.svg" rel="icon" media="(prefers-color-scheme: dark)" />
     <meta name="generator" content={Astro.generator} />
     <SEO {seo} />
-    <ViewTransitions />
+    <ClientRouter />
     <SpeedInsights />
   </head>
   <body>

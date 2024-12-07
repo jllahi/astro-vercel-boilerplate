@@ -1,6 +1,6 @@
-export const prerender = false
-
 import type { APIContext, APIRoute } from 'astro'
+
+export const prerender = false
 
 // context.params from APIContext
 // export const GET: APIRoute = ({ params, request }: APIContext) => {
