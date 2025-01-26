@@ -30,7 +30,7 @@
     "web-vitals": "^4.2.4"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^3.16.0",
+    "@antfu/eslint-config": "^4.0.0",
     "@typescript-eslint/eslint-plugin": "^8.21.0",
     "@typescript-eslint/parser": "^8.21.0",
     "astro-eslint-parser": "^1.1.0",
