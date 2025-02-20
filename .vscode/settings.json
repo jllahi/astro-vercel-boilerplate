@@ -118,5 +118,19 @@
   "prettier.enable": true, // false,
   "tailwindCSS.emmetCompletions": true,
   "typescript.inlayHints.parameterNames.enabled": "all",
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "files.exclude": {
+    "svelte.config.js": true,
+    "bun.lockb": true,
+    "tsconfig.json": true,
+    ".gitignore": true,
+    "pnpm-lock.yaml": false,
+    "prettier.config.mjs": true,
+    "eslint.config.mjs": true,
+    "node_modules": true,
+    ".astro": true,
+    ".next": true,
+    ".vscode/launch.json": true,
+    ".vscode/extensions.json": false
+  }
 }

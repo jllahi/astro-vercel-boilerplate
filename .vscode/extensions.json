@@ -19,7 +19,8 @@
     "xabikos.JavaScriptSnippets",
     "yoavbls.pretty-ts-errors",
     "AaronDill.vercel-project-manager-vscode",
-    "HaydenBleasel.vercel-vscode"
+    "HaydenBleasel.vercel-vscode",
+    "sguerri.simple-hide-files"
   ],
   "unwantedRecommendations": []
 }
