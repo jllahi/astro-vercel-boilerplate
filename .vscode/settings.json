@@ -131,6 +131,8 @@
     ".astro": true,
     ".next": true,
     ".vscode/launch.json": true,
-    ".vscode/extensions.json": false
+    ".vscode/extensions.json": false,
+    ".vercel": true,
+    ".prettierignore": true
   }
 }
