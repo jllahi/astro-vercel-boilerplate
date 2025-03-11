@@ -121,7 +121,7 @@
   "typescript.tsdk": "node_modules/typescript/lib",
   "files.exclude": {
     "svelte.config.js": true,
-    "bun.lockb": true,
+    "bun.lock": false,
     "tsconfig.json": true,
     ".gitignore": true,
     "pnpm-lock.yaml": false,
