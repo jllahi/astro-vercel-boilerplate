@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "private": true,
-  "packageManager": "pnpm@10.5.2",
+  "packageManager": "pnpm@10.6.2",
   "scripts": {
     "astro": "astro",
     "build": "astro check && astro build",
@@ -30,13 +30,13 @@
     "web-vitals": "^4.2.4"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^4.6.0",
+    "@antfu/eslint-config": "^4.8.1",
     "@typescript-eslint/eslint-plugin": "^8.26.1",
     "@typescript-eslint/parser": "^8.26.1",
     "astro-eslint-parser": "^1.2.1",
     "astro-meta-tags": "^0.3.1",
-    "eslint": "^9.21.0",
-    "eslint-config-prettier": "^10.0.3",
+    "eslint": "^9.22.0",
+    "eslint-config-prettier": "^10.1.1",
     "eslint-plugin-astro": "^1.3.1",
     "eslint-plugin-format": "^1.0.1",
     "eslint-plugin-tailwindcss": "^3.18.0",
