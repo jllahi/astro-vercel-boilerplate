@@ -109,30 +109,35 @@
   "git.autofetch": true,
   "json.schemas": [
     {
-      "fileMatch": ["/src/content/navigation/**"],
+      "fileMatch": [
+        "/src/content/navigation/**"
+      ],
       "url": "./.astro/collections/navigation.schema.json"
     }
   ],
-  "prettier.documentSelectors": ["**/*.astro"],
+  "prettier.documentSelectors": [
+    "**/*.astro"
+  ],
   // Disable the default formatter, use eslint instead
   "prettier.enable": true, // false,
   "tailwindCSS.emmetCompletions": true,
   "typescript.inlayHints.parameterNames.enabled": "all",
   "typescript.tsdk": "node_modules/typescript/lib",
   "files.exclude": {
-    "svelte.config.js": true,
+    "**/.ruby-lsp": false,
+    "svelte.config.js": false,
     "bun.lock": false,
-    "tsconfig.json": true,
-    ".gitignore": true,
+    "tsconfig.json": false,
+    ".gitignore": false,
     "pnpm-lock.yaml": false,
-    "prettier.config.mjs": true,
-    "eslint.config.mjs": true,
-    "node_modules": true,
-    ".astro": true,
-    ".next": true,
-    ".vscode/launch.json": true,
+    "prettier.config.mjs": false,
+    "eslint.config.mjs": false,
+    "node_modules": false,
+    ".astro": false,
+    ".next": false,
+    ".vscode/launch.json": false,
     ".vscode/extensions.json": false,
-    ".vercel": true,
-    ".prettierignore": true
+    ".vercel": false,
+    ".prettierignore": false
   }
 }
