@@ -124,7 +124,6 @@
   "typescript.inlayHints.parameterNames.enabled": "all",
   "typescript.tsdk": "node_modules/typescript/lib",
   "files.exclude": {
-    "**/.ruby-lsp": false,
     "svelte.config.js": false,
     "bun.lock": false,
     "tsconfig.json": false,
