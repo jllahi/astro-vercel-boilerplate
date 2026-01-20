@@ -1,7 +1,10 @@
 import vercel from '@astrojs/vercel'
 import metaTags from 'astro-meta-tags'
 import { defineConfig } from 'astro/config'
-// import tailwind from '@astrojs/tailwind'
+import process from 'node:process'
+import { loadEnv } from 'vite'
+
+const { ISR_BYPASS_TOKEN } = loadEnv(process.env.NODE_ENV || 'development', process.cwd(), '')
 
 // https://astro.build/config
 export default defineConfig({
@@ -31,7 +34,7 @@ export default defineConfig({
       // almacena todas las páginas en la primera solicitud y las guarda por 1 día
       expiration: 60 * 60 * 24,
       // Un string aleatoria secreta que creas.
-      bypassToken: '115556d774a8115556d774a8115556d774a8s',
+      bypassToken: ISR_BYPASS_TOKEN || 'y96k60yj06yij06jy06ijy0i6jy60yjyj60yj60',
       // Rutas que siempre se servirán frescas.
       exclude: ['/api/revalidate', '/ssr', '/edge.json'],
     },

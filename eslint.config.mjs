@@ -7,7 +7,7 @@ export default antfu(
     // svelte: true,
     astro: true,
     stylistic: false,
-    // formatters: true,
+    formatters: false,
     ignores: ['.astro', '.dist', 'pnpm-lock.yaml'],
   }
 

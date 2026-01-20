@@ -18,7 +18,7 @@ export default {
   arrowParens: 'always',
   plugins: [
     'prettier-plugin-astro',
-    'prettier-plugin-organize-imports',
+    // 'prettier-plugin-organize-imports',
     'prettier-plugin-tailwindcss',
   ],
   overrides: [

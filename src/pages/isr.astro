@@ -46,6 +46,7 @@ const time = new Date().toLocaleTimeString()
       body: JSON.stringify(''),
       headers: {
         'Content-Type': 'application/json',
+        'x-prerender-revalidate': import.meta.env.ISR_REVALIDATE_TIME,
       },
     })
     // eslint-disable-next-line no-alert
