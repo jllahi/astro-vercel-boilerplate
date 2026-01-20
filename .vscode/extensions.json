@@ -1,26 +1,26 @@
 {
   "recommendations": [
     "aaron-bond.better-comments",
+    "AaronDill.vercel-project-manager-vscode",
     "antfu.iconify",
     "astro-build.astro-vscode",
-    // "astro-build.houston",
-    // "bradlc.vscode-tailwindcss",
     "DavidAnson.vscode-markdownlint",
-    "eliostruyf.vscode-front-matter",
     "esbenp.prettier-vscode",
+    "Fooxly.workspace",
+    "HaydenBleasel.vercel-vscode",
     "idered.npm",
-    "mhutchie.git-graph",
     "SheltonLouis.astro-snippets",
-    // "stivo.tailwind-fold",
     "unifiedjs.vscode-mdx",
     "usernamehw.errorlens",
-    "VisualStudioExptTeam.vscodeintellicode",
-    "WallabyJs.console-ninja",
-    "xabikos.JavaScriptSnippets",
-    "yoavbls.pretty-ts-errors",
-    "AaronDill.vercel-project-manager-vscode",
-    "HaydenBleasel.vercel-vscode",
-    "sguerri.simple-hide-files"
+    "yoavbls.pretty-ts-errors"
+    // "astro-build.houston",
+    // "bradlc.vscode-tailwindcss",
+    // "eliostruyf.vscode-front-matter",
+    // "mhutchie.git-graph",
+    // "stivo.tailwind-fold",
+    // "VisualStudioExptTeam.vscodeintellicode",
+    // "WallabyJs.console-ninja",
+    // "xabikos.JavaScriptSnippets",
   ],
   "unwantedRecommendations": []
 }

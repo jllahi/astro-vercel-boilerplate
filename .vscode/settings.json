@@ -106,37 +106,33 @@
   // },
   "files.autoSave": "onWindowChange",
   "files.autoSaveWhenNoErrors": true,
+  "files.exclude": {
+    ".astro": false,
+    ".gitignore": false,
+    ".next": false,
+    ".prettierignore": false,
+    ".vercel": false,
+    ".vscode/extensions.json": false,
+    ".vscode/launch.json": false,
+    "bun.lock": false,
+    "eslint.config.mjs": false,
+    "node_modules": false,
+    "pnpm-lock.yaml": false,
+    "prettier.config.mjs": false,
+    "svelte.config.js": false,
+    "tsconfig.json": false
+  },
   "git.autofetch": true,
-  "json.schemas": [
-    {
-      "fileMatch": [
-        "/src/content/navigation/**"
-      ],
-      "url": "./.astro/collections/navigation.schema.json"
-    }
-  ],
-  "prettier.documentSelectors": [
-    "**/*.astro"
-  ],
+  // "json.schemas": [
+  //   {
+  //     "fileMatch": ["/src/content/navigation/**"],
+  //     "url": "./.astro/collections/navigation.schema.json"
+  //   }
+  // ],
+  "prettier.documentSelectors": ["**/*.astro"],
   // Disable the default formatter, use eslint instead
   "prettier.enable": true, // false,
   "tailwindCSS.emmetCompletions": true,
   "typescript.inlayHints.parameterNames.enabled": "all",
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "files.exclude": {
-    "svelte.config.js": false,
-    "bun.lock": false,
-    "tsconfig.json": false,
-    ".gitignore": false,
-    "pnpm-lock.yaml": false,
-    "prettier.config.mjs": false,
-    "eslint.config.mjs": false,
-    "node_modules": false,
-    ".astro": false,
-    ".next": false,
-    ".vscode/launch.json": false,
-    ".vscode/extensions.json": false,
-    ".vercel": false,
-    ".prettierignore": false
-  }
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
