@@ -8,8 +8,7 @@ const ip = Astro.request.headers.get('x-real-ip')
 const city = decodeURIComponent(Astro.request.headers.get('x-vercel-ip-city')!)
 ---
 
-{/* <!-- <Layout seo={{ title: 'Welcome', description: 'How to use Vercel with Astro' }}> --> */}
-<Layout>
+<Layout seo={{ title: 'Welcome', description: 'How to use Vercel with Astro' }}>
   <main>
     <h1>Astro in <span class="text-gradient">Vercel</span></h1>
     <div class="banner">
@@ -57,28 +56,3 @@ const city = decodeURIComponent(Astro.request.headers.get('x-vercel-ip-city')!)
     font-size: 1.75em;
   }
 </style>
-{
-  /* <!-- 
-
-  .banner strong {
-    font-size: 1.75em;
-  }
-
-  .instructions {
-    line-height: 1.6;
-    margin: 1rem 0;
-    background: #4f39fa;
-    padding: 1rem;
-    border-radius: 0.4rem;
-    color: var(--color-bg);
-  }
-
-  .instructions code {
-    font-size: 0.875em;
-    border: 0.1em solid var(--color-border);
-    border-radius: 4px;
-    padding: 0.15em 0.25em;
-  }
-
-</style> -->  */
-}
