@@ -33,7 +33,7 @@
     "@antfu/eslint-config": "^7.7.3",
     "@typescript-eslint/eslint-plugin": "^8.64.0",
     "@typescript-eslint/parser": "^8.64.0",
-    "astro-eslint-parser": "^1.4.0",
+    "astro-eslint-parser": "^3.0.0",
     "astro-meta-tags": "^0.4.1",
     "eslint": "^9.39.5",
     "eslint-config-prettier": "^10.1.8",
