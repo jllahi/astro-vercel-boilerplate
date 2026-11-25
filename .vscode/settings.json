@@ -1,37 +1,37 @@
 {
-	"astro.content-intellisense": true,
-	"editor.formatOnSave": true, //false,
-	"editor.linkedEditing": true,
-	"explorer.fileNesting.enabled": true,
-	"explorer.fileNesting.expand": false,
-	// "explorer.fileNesting.patterns": {
-	// 	".prettierrc.js": ".prettierignore",
-	// 	"package.json": "pnpm-lock.yaml, package-lock.json, yarn.lock",
-	// 	"README.md": "CONTRIBUTING.md"
-	// },
-	"files.autoSave": "onWindowChange",
-	"files.autoSaveWhenNoErrors": true,
-	"files.exclude": {
-		".astro": false,
-		".gitignore": false,
-		".next": false,
-		".vercel": false,
-		".vscode": false,
-		"node_modules": false,
-		"pnpm-lock.yaml": false,
-		"svelte.config.js": false,
-		"tsconfig.json": false,
-		"renovate.json": false
-	},
-	"git.autofetch": true,
-	// "json.schemas": [
-	//   {
-	//     "fileMatch": ["/src/content/navigation/**"],
-	//     "url": "./.astro/collections/navigation.schema.json"
-	//   }
-	// ],
+  "astro.content-intellisense": true,
+  "editor.formatOnSave": true, //false,
+  "editor.linkedEditing": true,
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  // "explorer.fileNesting.patterns": {
+  // 	".prettierrc.js": ".prettierignore",
+  // 	"package.json": "pnpm-lock.yaml, package-lock.json, yarn.lock",
+  // 	"README.md": "CONTRIBUTING.md"
+  // },
+  "files.autoSave": "onWindowChange",
+  "files.autoSaveWhenNoErrors": true,
+  "files.exclude": {
+    ".astro": false,
+    ".gitignore": false,
+    ".next": false,
+    ".vercel": false,
+    ".vscode": false,
+    "node_modules": false,
+    "pnpm-lock.yaml": false,
+    "svelte.config.js": false,
+    "tsconfig.json": false,
+    "renovate.json": false
+  },
+  "git.autofetch": true,
+  // "json.schemas": [
+  //   {
+  //     "fileMatch": ["/src/content/navigation/**"],
+  //     "url": "./.astro/collections/navigation.schema.json"
+  //   }
+  // ],
 
-	"tailwindCSS.emmetCompletions": true,
-	"typescript.inlayHints.parameterNames.enabled": "all",
-	"typescript.tsdk": "node_modules/typescript/lib"
+  "tailwindCSS.emmetCompletions": true,
+  "typescript.inlayHints.parameterNames.enabled": "all",
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
