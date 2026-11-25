@@ -23,7 +23,6 @@
 		".next": false,
 		".vercel": false,
 		".vscode": false,
-		"bun.lock": false,
 		"node_modules": false,
 		"pnpm-lock.yaml": false,
 		"svelte.config.js": false,
